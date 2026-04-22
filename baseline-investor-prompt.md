@@ -63,7 +63,7 @@ D. Key assumptions
 
 E. Unknowns / missing critical data
 - bullet points only
-- use consistent phrasing: "No verified public evidence identified for…"
+- use consistent phrasing: "No verified public evidence identified forï¿½"
 - especially include:
   - customers
   - revenue
@@ -83,7 +83,7 @@ F. Conflicts / inconsistencies
 G. Source quality notes
 - brief notes on which evidence is company-claimed, secondary, platform-derived, outdated, or conflicting
 
-Prompt 2 (Judgment Layer) — CLEAN VERSION:
+Prompt 2 (Judgment Layer) ï¿½ CLEAN VERSION:
 
 Role:
 Act as a senior Business Developer and Business Analyst specializing in deep-tech infrastructure startups, telecom partnerships, edge computing, and B2B go-to-market strategy.
@@ -92,7 +92,7 @@ Audience:
 Investor-style decision maker evaluating startup opportunities.
 
 Task / Objective:
-Evaluate Mutable’s commercial credibility strictly based on the provided evidence base.
+Evaluate Mutableï¿½s commercial credibility strictly based on the provided evidence base.
 
 Input:
 You are given an evidence base structured as:
@@ -131,7 +131,7 @@ Evaluation dimensions:
 - defensibility
 
 Scoring:
-Rate each from 1–5:
+Rate each from 1ï¿½5:
 1 = weak / unsupported  
 3 = plausible but not de-risked  
 5 = strong with clear supporting evidence  
@@ -140,7 +140,7 @@ Rate each from 1–5:
 - If evidence is missing ? default to lower scores.
 
 Output format:
-A. Investment summary (4–6 sentences)
+A. Investment summary (4ï¿½6 sentences)
 - core thesis
 - why it matters
 - main concern
@@ -161,7 +161,7 @@ C. Business analysis
 - scalability
 - execution risk
 
-D. Scorecard (1–5 with justification)
+D. Scorecard (1ï¿½5 with justification)
 
 E. Counterargument
 - strongest possible bull case
@@ -183,9 +183,9 @@ Success criteria:
 - Each claim must link to evidence from the input.
 - Scores must reflect evidence strength (missing data ? lower score).
 - Unknowns must appear explicitly in risks and final recommendation.
-- No section may exceed 5–6 bullet points or short paragraphs.
+- No section may exceed 5ï¿½6 bullet points or short paragraphs.
 
-Prompt 2 — (FULL VERSION WITH DATASET)
+Prompt 2 â€” Run 2 (FULL VERSION WITH DATASET)
 Role:
 Act as a senior Business Developer and Business Analyst specializing in deep-tech infrastructure startups, telecom partnerships, edge computing, and B2B go-to-market strategy.
 
@@ -193,23 +193,23 @@ Audience:
 Investor-style decision maker evaluating startup opportunities.
 
 Task / Objective:
-Evaluate Mutable’s commercial credibility strictly based on the provided evidence base.
+Evaluate Mutableï¿½s commercial credibility strictly based on the provided evidence base.
 
 Input:
 
 A. Current facts:
-- Mutable’s live public website describes the company as “The Public Edge Cloud.” (mutable.cloud)
-- Mutable’s website states it upgrades underutilized operator-owned servers into monetizable edge compute capacity. (mutable.cloud)
-- Mutable’s website lists product components including Mutable OS, Mutable Kubernetes Platform, Mutable Node, Mutable Mesh, and a Marketplace. (mutable.cloud)
-- Mutable’s website lists application areas including AR/VR, IoT, robotics, autonomous vehicles, and cloud gaming. (mutable.cloud)
-- A public GitHub organization named Mutable exists and describes itself as “Airbnb for servers, the public edge cloud.” (github.com/mutable)
+- Mutableï¿½s live public website describes the company as ï¿½The Public Edge Cloud.ï¿½ (mutable.cloud)
+- Mutableï¿½s website states it upgrades underutilized operator-owned servers into monetizable edge compute capacity. (mutable.cloud)
+- Mutableï¿½s website lists product components including Mutable OS, Mutable Kubernetes Platform, Mutable Node, Mutable Mesh, and a Marketplace. (mutable.cloud)
+- Mutableï¿½s website lists application areas including AR/VR, IoT, robotics, autonomous vehicles, and cloud gaming. (mutable.cloud)
+- A public GitHub organization named Mutable exists and describes itself as ï¿½Airbnb for servers, the public edge cloud.ï¿½ (github.com/mutable)
 - A current Momenta portfolio page lists Mutable as a portfolio company. (momenta.vc)
 
 B. Historical facts:
 - Momenta announced an investment in Mutable on March 31, 2020. (momenta.vc)
 - Mutable raised a .5M seed round in 2020. (public reporting)
 - Mutable participated in the 5G Open Innovation Lab inaugural cohort in 2020. (ongoalliance.org)
-- Mutable was listed as a finalist in Light Reading’s Leading Lights 2020. (lightreading.com)
+- Mutable was listed as a finalist in Light Readingï¿½s Leading Lights 2020. (lightreading.com)
 
 C. Inferences:
 - Mutable appears to combine infrastructure software, operator enablement, and a marketplace model rather than a single product offering.
@@ -266,7 +266,7 @@ Evaluation dimensions:
 - defensibility
 
 Scoring:
-Rate each from 1–5:
+Rate each from 1ï¿½5:
 1 = weak / unsupported  
 3 = plausible but not de-risked  
 5 = strong with clear supporting evidence  
@@ -276,10 +276,10 @@ Rate each from 1–5:
 
 Output format:
 
-A. Investment summary (4–6 sentences)
+A. Investment summary (4ï¿½6 sentences)
 B. Business development analysis
 C. Business analysis
-D. Scorecard (1–5 with justification)
+D. Scorecard (1ï¿½5 with justification)
 E. Counterargument
 F. Top 5 risks
 G. Top 5 diligence questions
@@ -290,7 +290,7 @@ Success criteria:
 - Each claim must link to evidence from the input.
 - Scores must reflect evidence strength (missing data ? lower score).
 - Unknowns must appear explicitly in risks and final recommendation.
-- No section may exceed 5–6 bullet points or short paragraphs.
+- No section may exceed 5ï¿½6 bullet points or short paragraphs.
 
 Example (follow this style exactly for the Investment summary section):
 
@@ -300,7 +300,7 @@ Example (follow this style exactly for the Investment summary section):
 
 Now perform the full evaluation using the provided evidence base.
 
-Prompt 2 — Run 3 (THREE EXAMPLES, FULL VERSION)
+Prompt 2 ï¿½ Run 3 (THREE EXAMPLES, FULL VERSION)
 Role:
 Act as a senior Business Developer and Business Analyst specializing in deep-tech infrastructure startups, telecom partnerships, edge computing, and B2B go-to-market strategy.
 
@@ -381,7 +381,7 @@ Evaluation dimensions:
 - defensibility
 
 Scoring:
-Rate each from 1–5:
+Rate each from 1ï¿½5:
 1 = weak / unsupported  
 3 = plausible but not de-risked  
 5 = strong with clear supporting evidence  
@@ -391,10 +391,10 @@ Rate each from 1–5:
 
 Output format:
 
-A. Investment summary (4–6 sentences)
+A. Investment summary (4ï¿½6 sentences)
 B. Business development analysis
 C. Business analysis
-D. Scorecard (1–5 with justification)
+D. Scorecard (1ï¿½5 with justification)
 E. Counterargument
 F. Top 5 risks
 G. Top 5 diligence questions
@@ -405,30 +405,30 @@ Success criteria:
 - Each claim must link to evidence from the input.
 - Scores must reflect evidence strength (missing data ? lower score).
 - Unknowns must appear explicitly in risks and final recommendation.
-- No section may exceed 5–6 bullet points or short paragraphs.
+- No section may exceed 5ï¿½6 bullet points or short paragraphs.
 
 Examples (follow these styles exactly):
 
-Example 1 — Investment summary:
+Example 1 ï¿½ Investment summary:
 "The company presents a plausible approach to monetizing underutilized edge infrastructure by enabling operators to convert idle capacity into distributed compute resources. However, there is no verified evidence of current customer adoption, production deployments, or repeatable go-to-market execution. The primary commercial concern is whether fragmented supply can be aggregated into a reliable platform with sufficient demand-side pull. As a result, while the strategic direction is aligned with broader edge computing trends, the business remains insufficiently de-risked from a commercial perspective."
 
-Example 2 — Risk section style:
+Example 2 ï¿½ Risk section style:
 - No verified demand-side adoption: absence of customer evidence limits confidence in real market need.
 - No proven supply-side commitments: lack of confirmed operator contracts creates execution uncertainty.
 - Two-sided marketplace risk: requires simultaneous supply and demand scaling.
 - Unclear unit economics: no data on pricing, utilization, or margins.
 - GTM uncertainty: no evidence of repeatable sales motion.
 
-Example 3 — Scorecard style:
-- problem-solution fit: 3/5 — plausible but not evidenced by adoption
-- GTM feasibility: 2/5 — no proof of repeatable customer acquisition
-- scalability: 2/5 — dependent on multi-party coordination and standardization
+Example 3 ï¿½ Scorecard style:
+- problem-solution fit: 3/5 ï¿½ plausible but not evidenced by adoption
+- GTM feasibility: 2/5 ï¿½ no proof of repeatable customer acquisition
+- scalability: 2/5 ï¿½ dependent on multi-party coordination and standardization
 
 ---
 
 Now perform the full evaluation using the provided evidence base.
 
-Prompt 3 — Decision Trigger (Action Layer)
+Prompt 3 ï¿½ Decision Trigger (Action Layer)
 Role:
 Act as a senior investor and decision analyst focused on de-risking startup opportunities.
 
@@ -456,7 +456,7 @@ Tone:
 
 Output format:
 
-A. Current decision baseline (2–3 sentences)
+A. Current decision baseline (2ï¿½3 sentences)
 - Summarize the current recommendation and its key limitation
 
 B. Top 5 decision-changing triggers
@@ -467,7 +467,7 @@ For each:
 - How to validate (practical way to obtain evidence)
 
 C. Priority ranking
-- Rank the 5 triggers by impact on decision (1–5)
+- Rank the 5 triggers by impact on decision (1ï¿½5)
 - Brief justification
 
 D. Action plan
@@ -478,7 +478,7 @@ Success criteria:
 - Triggers must be specific and testable (not vague)
 - Output must be concise, decision-focused, and actionable
 
-Prompt 3 — Decision Trigger (FINAL VERSION)
+Prompt 3 ï¿½ Decision Trigger (FINAL VERSION)
 Role:
 Act as a senior investor and decision analyst focused on de-risking startup opportunities.
 
@@ -526,7 +526,7 @@ Tone:
 
 Output format:
 
-A. Current decision baseline (2–3 sentences)
+A. Current decision baseline (2ï¿½3 sentences)
 - Summarize the current recommendation
 - Highlight the key limiting factor (main uncertainty)
 
@@ -540,7 +540,7 @@ For each:
 - Validation method (specific: customer interview, contract proof, usage data, etc.)
 
 C. Priority ranking
-- Rank triggers 1–5 by decision impact
+- Rank triggers 1ï¿½5 by decision impact
 - Brief justification
 
 D. Action plan
