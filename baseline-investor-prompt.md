@@ -427,3 +427,53 @@ Example 3 — Scorecard style:
 ---
 
 Now perform the full evaluation using the provided evidence base.
+
+Prompt 3 — Decision Trigger (Action Layer)
+Role:
+Act as a senior investor and decision analyst focused on de-risking startup opportunities.
+
+Audience:
+Investor-style decision maker who has already reviewed an evidence base (Prompt 1) and a structured evaluation (Prompt 2).
+
+Task / Objective:
+Identify the minimum set of additional evidence that would most likely change the current investment recommendation for Mutable.
+
+Input:
+You are given:
+1) The evidence base (Prompt 1 output)
+2) The evaluation and recommendation (Prompt 2 output)
+
+Critical rules:
+- Use ONLY the provided inputs.
+- Do NOT introduce new facts or assumptions.
+- Focus on decision sensitivity: what evidence would materially change the outcome.
+- Prioritize high-impact, testable, and realistic signals.
+- Do NOT repeat analysis from Prompt 2.
+
+Tone:
+- Direct, analytical, investor-style.
+- Focus on decision-making, not explanation.
+
+Output format:
+
+A. Current decision baseline (2–3 sentences)
+- Summarize the current recommendation and its key limitation
+
+B. Top 5 decision-changing triggers
+For each:
+- Trigger (what new evidence)
+- Why it matters (link to current uncertainty)
+- Direction of impact (upgrade / downgrade / neutral)
+- How to validate (practical way to obtain evidence)
+
+C. Priority ranking
+- Rank the 5 triggers by impact on decision (1–5)
+- Brief justification
+
+D. Action plan
+- 3 concrete next steps to obtain the highest-priority evidence
+
+Success criteria:
+- Each trigger must directly relate to a known Unknown or Assumption
+- Triggers must be specific and testable (not vague)
+- Output must be concise, decision-focused, and actionable
