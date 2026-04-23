@@ -1,3 +1,6 @@
+## Changelog
+- v1.0: Initial version (Day 6 system build)
+
 # Prompt 3: Decision Trigger
 
 ## Version
