@@ -1,19 +1,9 @@
-## Changelog
-- v1.0: Initial version (Day 6 system build)
-- v1.1: Replaced hardcoded Mutable evidence with reusable placeholder input and generalized company-specific fields
-
-# Prompt 2: Judgment Evaluation
-
-## Version
-v1.1
-
-## Purpose
-This prompt evaluates a startup's commercial credibility based on a provided evidence base, producing structured analysis, scoring, risks, and recommendations.
-
-## When to Use
-Use this prompt after completing Prompt 1. Paste the full Prompt 1 output into the [INPUT] placeholder below before running.
-
-## Full Prompt
+# Prompt 2 — Judgment Layer, Run 3 (Few-Shot, Three Examples)
+# Function: Same contract as Run 1 & 2, but adds THREE targeted examples.
+# Covers: Investment summary style, Risk section style, Scorecard style.
+# Day 4 lesson: 3 examples covers all major output sections for near-professional quality.
+# Feed Prompt 1 output into the [INPUT] section before running.
+# ─────────────────────────────────────────────────────────────────────────────
 
 Role:
 Act as a senior Business Developer and Business Analyst specializing in deep-tech infrastructure startups, telecom partnerships, edge computing, and B2B go-to-market strategy.
@@ -40,7 +30,7 @@ Critical rules:
 - Use ONLY the provided evidence.
 - Do NOT introduce new facts or external knowledge.
 - Do NOT upgrade assumptions or inferences into facts.
-- If something is unknown -> treat it as a risk.
+- If something is unknown → treat it as a risk.
 - Unknowns must explicitly influence:
   - risk analysis
   - scoring (lower confidence)
@@ -63,20 +53,20 @@ Evaluation dimensions:
 - defensibility
 
 Scoring:
-Rate each from 1-5:
+Rate each from 1–5:
 1 = weak / unsupported
 3 = plausible but not de-risked
 5 = strong with clear supporting evidence
 
 - Scores must be justified using evidence.
-- If evidence is missing -> default to lower scores.
+- If evidence is missing → default to lower scores.
 
 Output format:
 
-A. Investment summary (4-6 sentences)
+A. Investment summary (4–6 sentences)
 B. Business development analysis
 C. Business analysis
-D. Scorecard (1-5 with justification)
+D. Scorecard (1–5 with justification)
 E. Counterargument
 F. Top 5 risks
 G. Top 5 diligence questions
@@ -85,39 +75,27 @@ I. Confidence level
 
 Success criteria:
 - Each claim must link to evidence from the input.
-- Scores must reflect evidence strength (missing data -> lower score).
+- Scores must reflect evidence strength (missing data → lower score).
 - Unknowns must appear explicitly in risks and final recommendation.
-- No section may exceed 5-6 bullet points or short paragraphs.
+- No section may exceed 5–6 bullet points or short paragraphs.
 
 Examples (follow these styles exactly):
 
-Example 1 - Investment summary:
+Example 1 — Investment summary:
 "The company presents a plausible approach to monetizing underutilized edge infrastructure by enabling operators to convert idle capacity into distributed compute resources. However, there is no verified evidence of current customer adoption, production deployments, or repeatable go-to-market execution. The primary commercial concern is whether fragmented supply can be aggregated into a reliable platform with sufficient demand-side pull. As a result, while the strategic direction is aligned with broader edge computing trends, the business remains insufficiently de-risked from a commercial perspective."
 
-Example 2 - Risk section style:
+Example 2 — Risk section style:
 - No verified demand-side adoption: absence of customer evidence limits confidence in real market need.
 - No proven supply-side commitments: lack of confirmed operator contracts creates execution uncertainty.
 - Two-sided marketplace risk: requires simultaneous supply and demand scaling.
 - Unclear unit economics: no data on pricing, utilization, or margins.
 - GTM uncertainty: no evidence of repeatable sales motion.
 
-Example 3 - Scorecard style:
-- problem-solution fit: 3/5 - plausible but not evidenced by adoption
-- GTM feasibility: 2/5 - no proof of repeatable customer acquisition
-- scalability: 2/5 - dependent on multi-party coordination and standardization
+Example 3 — Scorecard style:
+- problem-solution fit: 3/5 — plausible but not evidenced by adoption
+- GTM feasibility: 2/5 — no proof of repeatable customer acquisition
+- scalability: 2/5 — dependent on multi-party coordination and standardization
 
 ---
 
 Now perform the full evaluation using the provided evidence base.
-
-## Usage Instructions
-1. Replace [COMPANY] with the target startup name and update the date in the objective as needed.
-2. Paste the full Prompt 1 output into the [PASTE PROMPT 1 OUTPUT HERE] placeholder.
-3. Provide the completed prompt to an AI model.
-4. The output will be a complete evaluation report.
-5. Save the output in the /evals folder as prompt-2-evaluation-[startup].md.
-
-## Notes for Improvement
-- Add customizable scoring rubrics for different investment stages.
-- Integrate quantitative metrics for more objective scoring.
-- Develop modular sections for easier customization per industry.

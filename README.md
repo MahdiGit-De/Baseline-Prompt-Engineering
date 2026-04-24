@@ -1,46 +1,75 @@
-# Prompt Engineering Mastery
+# Startup Evaluation Prompt System
+## A reusable investor-grade analysis pipeline built through prompt engineering
 
-## Purpose
-This repository is built to organize and operationalize a prompt engineering system for evaluating startup opportunities. It structures prompt workflows, captures dataset outputs, compares experiment runs, and documents decision validation roadmaps.
+---
 
-## Workflow
-1. **Prompt 1 – Evidence Extraction**: Extract current facts, historical facts, inferences, assumptions, unknowns, conflicts, and source quality notes from public information.
-2. **Prompt 2 – Judgment / Evaluation**: Evaluate the evidence base and produce a structured commercial analysis, scoring, risks, and recommendation.
-3. **Prompt 3 – Decision Trigger**: Identify the minimum set of evidence that would change the investment recommendation and define validation priorities.
+## System Architecture
 
-## How to Use
-1. Place prompt definitions and templates in the `/business` folder.
-2. Run Prompt 1 to generate dataset outputs and save them under `/datasets`.
-3. Use Prompt 2 to evaluate the generated dataset and save evaluation reports under `/evals`.
-4. Use Prompt 3 to create validation roadmaps and save them under `/validation`.
-5. Compare different prompt variants in `/experiments`, including Run 1, Run 2, and Run 3.
+```
+Prompt 0 (optional)     Prompt 1              Prompt 2              Prompt 3              Prompt 4
+Pain Discovery    →     Evidence         →    Judgment         →    Decision         →    Validation
+(if building)           Extraction            Layer                 Triggers              Roadmap
+```
 
-## Example Usage
-- Read the prompt definitions in `/business/prompt-1.md`, `/business/prompt-2.md`, and `/business/prompt-3.md`.
-- Run Prompt 1 and write the output to `/datasets/prompt-1-output.md`.
-- Run Prompt 2 using the Prompt 1 output, then save the evaluation to `/evals/prompt-2-evaluation.md`.
-- Run Prompt 3 and save the decision triggers to `/validation/prompt-3-triggers.md`.
-- Save comparative experiment notes under `/experiments/run-1.md`, `/experiments/run-2.md`, and `/experiments/run-3.md`.
+---
 
-## Versioning Strategy
-- Use semantic versioning for the repository: `v1.0.0`, `v1.1.0`, etc.
-- Tag major prompt or workflow updates with release notes.
-- Keep prompt files and dataset outputs versioned together when making structural changes.
+## How to Use (Quick Start)
 
-## Folder Structure Explanation
-- `/business` – Prompt definitions, templates, and project architecture notes.
-- `/datasets` – Outputs from Prompt 1 and raw evidence datasets.
-- `/experiments` – Comparison of multiple prompt runs and variant experiments.
-- `/validation` – Decision trigger roadmaps and validation plans derived from Prompt 3.
-- `/evals` – Structured evaluation reports produced by Prompt 2.
-- `/schemas` – JSON/YAML schemas, metadata definitions, and structured data templates.
+### For evaluating a startup:
+1. Open `prompts/01_evidence_extraction.md`
+2. Replace `[COMPANY]` and `[DATE]`
+3. Run → copy full output
+4. Open `prompts/02_judgment_run3_few_shot.md`
+5. Paste Prompt 1 output into `[PASTE PROMPT 1 OUTPUT HERE]`
+6. Run → copy full output
+7. Open `prompts/03_decision_trigger.md`
+8. Paste both outputs → Run
+9. Open `prompts/04_validation_roadmap.md`
+10. Paste Prompt 3 output → Run
 
-## Suggested Files
-- `/business/prompt-1.md`
-- `/business/prompt-2.md`
-- `/business/prompt-3.md`
-- `/datasets/prompt-1-output-run1.md`
-- `/experiments/run-1-comparison.md`
-- `/validation/prompt-3-roadmap.md`
-- `/evals/prompt-2-scorecard.md`
-- `/schemas/prompt-schema.yaml`
+### For one combined message (Prompt 3 + 4):
+Use `validation/prompt3_to_validation_roadmap_chained.md`
+
+---
+
+## Prompt Library
+
+| File | Purpose | Run order |
+|------|---------|-----------|
+| `prompts/01_evidence_extraction.md` | Evidence base — facts only, no judgment | 1st |
+| `prompts/02_judgment_run1_zero_shot.md` | Baseline evaluation — no examples | 2nd (baseline) |
+| `prompts/02_judgment_run2_one_shot.md` | Evaluation + 1 style example | 2nd (improved) |
+| `prompts/02_judgment_run3_few_shot.md` | Evaluation + 3 examples — recommended | 2nd (best) |
+| `prompts/03_decision_trigger.md` | What evidence would change the decision | 3rd |
+| `prompts/04_validation_roadmap.md` | 7–10 day execution plan | 4th |
+| `validation/prompt3_to_validation_roadmap_chained.md` | Prompt 3 + 4 in one message | Combined |
+
+---
+
+## Key Design Principles
+
+### Evidence discipline
+Every claim is classified as: Current fact / Historical fact / Inference / Assumption / Unknown.
+Historical signals do NOT prove current commercial traction.
+
+### Separation of concerns
+- Prompt 1 = What is true? (no judgment)
+- Prompt 2 = What does it mean? (no new facts)
+- Prompt 3 = What would change the verdict?
+- Prompt 4 = How do we find out?
+
+### Contract-based prompting
+Every prompt includes: Role → Audience → Task → Input → Rules → Tone → Output format → Success criteria
+
+### Few-shot calibration (Day 4)
+Use Run 3 (3 examples) for production. Use Run 1 to establish baseline for comparison.
+
+---
+
+## Learning Progress
+See `learning/progress_tracker.md` for full day-by-day learning log.
+
+---
+
+## Experiment Logs
+See `experiments/` for run comparisons and observations.
